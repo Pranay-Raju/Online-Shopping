@@ -68,7 +68,6 @@
 	<tr>
 		<th width="80">Category ID</th>
 		<th width="120">Category Name</th>
-		<!-- <th width="120">Category Country</th> -->
 		<th width="60">Edit</th>
 		<th width="60">Delete</th>
 	</tr>
@@ -76,7 +75,6 @@
 		<tr>
 			<td>${category.id}</td>
 			<td>${category.name}</td>
-			<%-- <td>${category.country}</td> --%>
 			<td><a href="<c:url value='/editCategory/${category.id}' />" >Edit</a></td>
 			<td><a href="<c:url value='/removeCategory/${category.id}' />" >Delete</a></td>
 		</tr>
