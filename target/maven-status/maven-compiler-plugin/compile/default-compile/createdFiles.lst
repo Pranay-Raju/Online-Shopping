@@ -1,7 +1,0 @@
-com\spring\controller\CategoryController.class
-com\spring\model\Category.class
-com\spring\service\CategoryService.class
-com\spring\dao\CategoryDAO.class
-com\spring\controller\HomeController.class
-com\spring\service\CategoryServiceImpl.class
-com\spring\dao\CategoryDAOImpl.class
