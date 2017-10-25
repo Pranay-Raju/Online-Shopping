@@ -7,6 +7,6 @@
 <title>Home Page</title>
 </head>
 <body>
-HELLO WORLD
+<center>HELLO WORLD</center>
 </body>
 </html>

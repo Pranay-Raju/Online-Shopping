@@ -19,7 +19,7 @@ public class CategoryController {
 	private CategoryService categoryService;
 	
 	
-	@RequestMapping(value = "/categories", method = RequestMethod.GET)
+	@RequestMapping(value = "/CategoryHome", method = RequestMethod.GET)
 	public String listCategories(Model model) {
 		model.addAttribute("category", new Category());
 		model.addAttribute("listCategories", this.categoryService.listCategories());
@@ -38,7 +38,7 @@ public class CategoryController {
 			this.categoryService.updateCategory(category);
 		}
 		
-		return "redirect:/categories";
+		return "redirect:/CategoryHome";
 		
 	}
 	
@@ -46,7 +46,7 @@ public class CategoryController {
     public String removeCategory(@PathVariable("id") int id){
 		
         this.categoryService.removeCategory(id);
-        return "redirect:/categories";
+        return "redirect:/CategoryHome";
     }
  
     @RequestMapping("/editCategory/{id}")

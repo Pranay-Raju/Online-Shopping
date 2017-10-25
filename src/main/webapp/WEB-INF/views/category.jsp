@@ -47,23 +47,13 @@
 			<form:input path="name" />
 		</td> 
 	</tr>
-	<%-- <tr>
-		<td>
-			<form:label path="country">
-				<spring:message text="Country"/>
-			</form:label>
-		</td>
-		<td>
-			<form:input path="country" />
-		</td>
-	</tr> --%>
 	<tr>
 		<td colspan="2">
-			<c:if test="${!empty category.name}">
+			<c:if test="${category.id != 0}">
 				<input type="submit"
 					value="<spring:message text="Edit Category"/>" />
 			</c:if>
-			<c:if test="${empty category.name}">
+			<c:if test="${category.id == 0}">
 				<input type="submit"
 					value="<spring:message text="Add Category"/>" />
 			</c:if>
