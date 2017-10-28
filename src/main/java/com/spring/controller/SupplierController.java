@@ -1,7 +1,6 @@
 package com.spring.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -23,7 +22,8 @@ public class SupplierController {
 	public String listSuppliers(Model model) {
 		model.addAttribute("supplier", new Supplier());
 		model.addAttribute("listSuppliers", this.supplierService.listSuppliers());
-		return "supplier";
+		model.addAttribute("SupplierPageClicked", true);
+		return "admin";
 	}
 	
 	//For add and update supplier both

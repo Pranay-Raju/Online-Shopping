@@ -1,7 +1,6 @@
 package com.spring.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -33,7 +32,8 @@ public class ProductController {
 		model.addAttribute("listProducts", this.productService.listProducts());
 		model.addAttribute("categoryList", this.categoryService.listCategories());
 		model.addAttribute("supplierList", this.supplierService.listSuppliers());
-		return "product";
+		model.addAttribute("ProductPageClicked", true);
+		return "admin";
 	}
 	
 	//For add and update product both
