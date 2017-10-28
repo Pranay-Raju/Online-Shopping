@@ -51,9 +51,9 @@
                     <li class="dropdown">
                         <a href="#" data-toggle="dropdown" class="dropdown-toggle">Admin <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="category">Category action</a></li>
-                            <li><a href="supplier">Supplier action</a></li>
-                            <li><a href="product">Product action</a></li>
+                            <li><a href="CategoryHome">Category action</a></li>
+                            <li><a href="SupplierHome">Supplier action</a></li>
+                            <li><a href="ProductHome">Product action</a></li>
                             <li class="divider"></li>
                             <!-- <li><a href="logout">Logout</a></li> -->
                          
@@ -70,17 +70,17 @@
 </div>
 <c:choose>
 		<c:when test="${ProductPageClicked}">
-			<c:import url="/WEB-INF/views/ProductPage.jsp"></c:import>
+			<c:import url="/WEB-INF/views/product.jsp"></c:import>
 		</c:when>
 	</c:choose>
 	<c:choose>
 		<c:when test="${CategoryPageClicked}">
-			<c:import url="/WEB-INF/views/CategoryPage.jsp"></c:import>
+			<c:import url="/WEB-INF/views/category.jsp"></c:import>
 		</c:when>
 	</c:choose>
 	<c:choose>
 		<c:when test="${SupplierPageClicked}">
-			<c:import url="/WEB-INF/views/SupplierPage.jsp"></c:import>
+			<c:import url="/WEB-INF/views/supplier.jsp"></c:import>
 		</c:when>
 	</c:choose>
 </body>

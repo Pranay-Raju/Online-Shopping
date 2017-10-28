@@ -1,4 +1,3 @@
-com\spring\controller\AdminController.class
 com\spring\controller\CategoryController.class
 com\spring\model\Category.class
 com\spring\dao\SupplierDAOImpl.class
@@ -16,5 +15,4 @@ com\spring\model\Supplier.class
 com\spring\dao\ProductDAOImpl.class
 com\spring\controller\ProductController.class
 com\spring\service\SupplierServiceImpl.class
-com\spring\controller\SupplierController.class
 com\spring\service\CategoryServiceImpl.class
