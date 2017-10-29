@@ -10,7 +10,7 @@ public class HomeController {
 	
 	@RequestMapping("/")
 	public ModelAndView home(Model model){
-		ModelAndView mv = new ModelAndView("hello");
+		ModelAndView mv = new ModelAndView("welcome");
 		return mv;
 	}
 
