@@ -40,6 +40,7 @@ public class SupplierDAOImpl implements SupplierDAO {
 	}
 
 	
+	@SuppressWarnings("unchecked")
 	public List<Supplier> listSuppliers() {
 		Session session = this.sessionFactory.getCurrentSession();
 		List<Supplier> suppliersList = session.createQuery("from Supplier").list();

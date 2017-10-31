@@ -83,5 +83,10 @@
 			<c:import url="/WEB-INF/views/supplier.jsp"></c:import>
 		</c:when>
 	</c:choose>
+	<c:choose>
+		<c:when test="${KartPageClicked}">
+			<c:import url="/WEB-INF/views/kart.jsp"></c:import>
+		</c:when>
+	</c:choose>
 </body>
 </html>

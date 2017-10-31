@@ -40,6 +40,7 @@ public class CategoryDAOImpl implements CategoryDAO {
 	}
 
 	
+	@SuppressWarnings("unchecked")
 	public List<Category> listCategories() {
 		Session session = this.sessionFactory.getCurrentSession();
 		List<Category> categoriesList = session.createQuery("from Category").list();
