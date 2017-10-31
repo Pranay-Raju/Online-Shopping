@@ -88,5 +88,10 @@
 			<c:import url="/WEB-INF/views/kart.jsp"></c:import>
 		</c:when>
 	</c:choose>
+	<c:choose>
+		<c:when test="${KartItemPageClicked}">
+			<c:import url="/WEB-INF/views/kartItem.jsp"></c:import>
+		</c:when>
+	</c:choose>
 </body>
 </html>

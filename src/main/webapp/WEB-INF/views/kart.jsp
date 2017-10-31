@@ -40,13 +40,13 @@
 		<tr>
 			<td>
 				<form:label path="userId">
-					<spring:message text="ID"/>
+					<spring:message text="User Name"/>
 				</form:label>
 			</td>
 			<td>
 				<form:select class="form-control" path="userId" required="true">
 					<c:forEach items="${userList}" var="user">
-						<form:option class="form-control" value="${user.id}">${user.name}	     </form:option>
+						<form:option class="form-control" value="${user.id}">${user.firstName}	     </form:option>
 					</c:forEach>
 				</form:select>
 			</td>
@@ -72,12 +72,14 @@
 		<table class="tg">
 		<tr>
 			<th width="80">Kart ID</th>
+			<th width="80">User ID</th>
 			<th width="60">Edit</th>
 			<th width="60">Delete</th>
 		</tr>
 		<c:forEach items="${listKarts}" var="kart">
 			<tr>
 				<td>${kart.id}</td>
+				<td>${kart.userId}</td>
 				<td><a href="<c:url value='/editKart/${kart.id}' />" >Edit</a></td>
 				<td><a href="<c:url value='/removeKart/${kart.id}' />" >Delete</a></td>
 			</tr>

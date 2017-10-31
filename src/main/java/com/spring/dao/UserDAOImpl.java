@@ -5,8 +5,11 @@ import java.util.List;
 import javax.transaction.Transactional;
 
 import org.hibernate.Criteria;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 /*import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;*/
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +21,7 @@ import com.spring.model.User;
 @Transactional
 public class UserDAOImpl implements UserDAO{
 	
-	/*private static final Logger logger = LoggerFactory.getLogger(UserDAOImpl.class);*/
+	private static final Logger logger = LoggerFactory.getLogger(UserDAOImpl.class);
 
 	@Autowired
 	private SessionFactory sessionFactory;
@@ -33,9 +36,17 @@ public class UserDAOImpl implements UserDAO{
 		return true;
 	}
 
+	@SuppressWarnings("unchecked")
 	public List<User> list() {
 		
-		return null;
+		Session session = this.sessionFactory.getCurrentSession();
+		List<User> usersList = session.createQuery("from User").list();
+		for(User user : usersList){
+			logger.info("User List::"+user);
+		}
+		return usersList;
+		
+		/*return null;*/
 	}
 
 	public User getUserById(int user_id) {

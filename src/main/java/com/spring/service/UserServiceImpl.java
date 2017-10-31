@@ -24,7 +24,7 @@ public class UserServiceImpl implements UserService{
 
 	public List<User> list() {
 		
-		return null;
+		return userDAO.list();
 	}
 
 	public User getUserById(int user_id) {

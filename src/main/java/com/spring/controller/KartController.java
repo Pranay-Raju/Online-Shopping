@@ -25,6 +25,7 @@ public class KartController {
 	public String listKarts(Model model) {
 		model.addAttribute("kart", new Kart());
 		model.addAttribute("listKarts", this.kartService.listKarts());
+		model.addAttribute("userList", this.userService.list());
 		model.addAttribute("KartPageClicked", true);
 		return "admin";
 	}
