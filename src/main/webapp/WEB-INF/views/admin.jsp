@@ -44,6 +44,9 @@
                             <li><a href="#">Sent Items</a></li>
                             <li class="divider"></li>
                             <li><a href="#">Trash</a></li>
+                            <c:if test="session.isAuthenticated()">
+                    <li><a href="#">Authenticated</a></li>
+                    </c:if>
                         </ul>
                     </li>
                 </ul>
@@ -55,12 +58,8 @@
                             <li><a href="SupplierHome">Supplier action</a></li>
                             <li><a href="ProductHome">Product action</a></li>
                             <li class="divider"></li>
-                            <!-- <li><a href="logout">Logout</a></li> -->
-                         
-                              <li> <a href="<c:url value="j_spring_security_logout" />">Logout</a></li>
-                            
-                           
-                            
+                            <li><a href="logout">Logout</a></li>
+                              <li> <a href=<c:url value="j_spring_security_logout" />>Logout</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -91,6 +90,11 @@
 	<c:choose>
 		<c:when test="${KartItemPageClicked}">
 			<c:import url="/WEB-INF/views/kartItem.jsp"></c:import>
+		</c:when>
+	</c:choose>
+	<c:choose>
+		<c:when test="${LoginPageClicked}">
+			<c:import url="/WEB-INF/views/login.jsp"></c:import>
 		</c:when>
 	</c:choose>
 </body>

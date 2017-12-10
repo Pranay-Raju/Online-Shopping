@@ -11,6 +11,7 @@ public class User {
 	@GeneratedValue
 	private int id;
     private String firstName;
+    private String userName;
     private String lastName;
     private String email;
     private String password;
@@ -31,6 +32,12 @@ public class User {
 	}
 	public String getLastName() {
 		return lastName;
+	}
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
@@ -67,8 +74,9 @@ public class User {
 	}
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
-				+ ", password=" + password + ", phone=" + phone + ", role=" + role + ", enabled=" + enabled + "]";
+		return "User [id=" + id + ", firstName=" + firstName + ", userName=" + userName + ", lastName=" + lastName
+				+ ", email=" + email + ", password=" + password + ", phone=" + phone + ", role=" + role + ", enabled="
+				+ enabled + "]";
 	}
 
 }

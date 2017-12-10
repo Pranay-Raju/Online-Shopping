@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<c:import url="nav.jsp"></c:import>
 
 <center>WELCOME</center>
 

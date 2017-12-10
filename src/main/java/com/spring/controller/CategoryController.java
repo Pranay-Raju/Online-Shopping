@@ -30,15 +30,19 @@ public class CategoryController {
 	@RequestMapping(value= "/category/add", method = RequestMethod.POST)
 	public String addCategory(@ModelAttribute("category") Category category){
 		
-		if(category.getId() == 0){
-			//new category, add it
-			this.categoryService.addCategory(category);
-		}else{
-			//existing category, call update
-			this.categoryService.updateCategory(category);
+		try {
+			if (category.getId() == 0) {
+				//new category, add it
+				this.categoryService.addCategory(category);
+			} else {
+				//existing category, call update
+				this.categoryService.updateCategory(category);
+			}
+			return "redirect:/CategoryHome";
+		} catch (org.hibernate.exception.ConstraintViolationException e) {
+			// TODO: handle exception
+			return "duplicate";
 		}
-		
-		return "redirect:/CategoryHome";
 		
 	}
 	
